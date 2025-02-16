@@ -1,0 +1,31 @@
+body {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#store {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px;;
+}
+
+#choices {
+    border: 2px solid;
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    background-color: hsl(199, 74%, 55%);
+    width: 40%;
+    height: 40px;
+    font-weight: bold;
+    font-size: large;
+}
+
+hr {
+    border: 2px solid;
+}
