@@ -7,27 +7,57 @@
     </head>
     <body>
         <div id="bank">
-            <h1>Welcome to the online Banking:</h1>
-            <div id="loginPage">
+            <!-- Add this where you want to show the transaction status message -->
+            <p id="transactionMessage"></p>
+            <form id="loginForm">
+                <h1>Welcome to the online Banking:</h1>
+                <hr>
                 <input
                     type="text"
+                    id="username"
+                    name="username"
                     placeholder="Enter username..."
+                    required
                 />
                 <input
                     type="password"
+                    id="password"
+                    name="password"
                     placeholder="Enter password..."
+                    required
                 />
                 <hr>
-                <button>Log-in</button>
-                <button>Sign-in</button>
-                <form id="category">
-                    <div id="foods">
-                        <h1>FOODS</h1>
-                    </div>
-                    <div id="drinks">
-                        <h1>DRINKS</h1>
-                    </div>
-                </form>
+                <button type="button" id="loginBtn">Log-in</button>
+                <button type="button" id="signinBtn">Sign-in</button>
+            </form>
+            
+            <div id="bankGUI">
+                <h2>Bank Dashboard</h2>
+                <hr>
+                <button type="button" id="checkBalanceBtn">Check Balance</button>
+                <button type="button" id="depositBtn">Deposit</button>
+                <button type="button" id="withdrawBtn">Withdraw</button>
+                <button type="button" id="logoutBtn">Logout</button>
+
+                <!-- Check Balance Section -->
+                <div id="checkBalanceSection" class="bankSection" style="display:none;">
+                    <h3>Your Balance:</h3>
+                    <p id="balanceDisplay">₱0.00</p>
+                </div>
+
+                <!-- Deposit Section -->
+                <div id="depositSection" class="bankSection" style="display:none;">
+                    <h3>Deposit Money:</h3>
+                    <input type="number" id="depositAmount" placeholder="Enter amount...">
+                    <button type="button" id="depositSubmitBtn">Submit Deposit</button>
+                </div>
+
+                <!-- Withdraw Section -->
+                <div id="withdrawSection" class="bankSection" style="display:none;">
+                    <h3>Withdraw Money:</h3>
+                    <input type="number" id="withdrawAmount" placeholder="Enter amount...">
+                    <button type="button" id="withdrawSubmitBtn">Submit Withdrawal</button>
+                </div>
             </div>
         </div>
         <script src="script.js"></script>
