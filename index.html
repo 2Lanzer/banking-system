@@ -1,67 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Tracker</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h2>Daily Expense Tracker</h2>
-    <form id="tracker-form">
-        <label for="date">DATE:</label>
-        <input type="date" id="date" name="date" required>
-        <hr>
-
-        <div style="width: 50%; float: left;">
-            <label for="food">Foods:</label>
-            <input type="number" id="food" name="food" min="0" required>
-
-            <label for="laundry">Laundry:</label>
-            <input type="number" id="laundry" name="laundry" min="0" required>
-        </div>
-
-        <div style="width: 50%; float: right;">
-            <label for="rent">Rent:</label>
-            <input type="number" id="rent" name="rent" min="0" required>
-        </div>
-
-        <button type="submit">Track</button>
-    </form>
-
-    <h3>Tracked Expenses:</h3>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Foods</th>
-                <th>Laundry</th>
-                <th>Rent</th>
-            </tr>
-        </thead>
-        <tbody id="tracker-results">
-            <!-- Tracked data will appear here -->
-        </tbody>
-    </table>
-
-    <script>
-        document.getElementById("tracker-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            // Get input values
-            const date = document.getElementById("date").value;
-            const food = document.getElementById("food").value;
-            const laundry = document.getElementById("laundry").value;
-            const rent = document.getElementById("rent").value;
-
-            // Insert a new row into the table
-            const table = document.getElementById("tracker-results");
-            const newRow = table.insertRow();
-            newRow.innerHTML = `<td>${date}</td><td>${food}</td><td>${laundry}</td><td>${rent}</td>`;
-
-            // Clear form after submission
-            document.getElementById("tracker-form").reset();
-        });
-    </script>
-</body>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <title>Cortejo Inventory</title>
+    </head>
+    <body>
+        <form>
+            <div>
+                <h1>Sign-In</h1>
+                <div>
+                    <label>Username:</label>
+                <input>
+                </div>
+                <div>
+                    <label>Password:</label>
+                    <input>
+                </div>
+            </div>
+        </form>
+    </body>
 </html>
